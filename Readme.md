@@ -50,12 +50,15 @@ STEP8:Lower the Z over the point, shutdown the Steper and move manually XY to th
 ![](https://github.com/Charkim-Pun/IMAGES/blob/master/8.png?raw=true)<br/><br/>
 
 第9步：回到显示屏的移动Z轴，一次一次地慢慢-0.025mm，直到听到限位开关被按压的声音为止。<br/>
-STEP9:Lower the Z by 0.025mm,until you can hear the switch pressed sound.<br/><br/>
+STEP9:Lower the Z by 0.025mm,til you can hear the switch pressed sound.<br/><br/>
 
 第10步：输入G92 X0 Y0 Z0，再输入输入M280 P0 S（收起舵机臂的角度）<br/>
 STEP10:Send G92 X0 Y0 Z0,M280 P0 S(Packing Up)<br/><br/>
 
 第11步：通过显示屏或者上位机来移动XYZ，使得喷头刚刚好处于小点的上面一点点（不能贴到热床，如果没把握就高一点点，不需要太精准，后续再调），输入M114并记录下来。<br/>
 STEP11:Move the Nozzle over the point by the Software or the LCD. The nozzle cant touch the bed. Send M114 to record the location.<br/>
-![](https://github.com/Charkim-Pun/IMAGES/blob/master/11.png?raw=true)<br/><br/>
+![](https://github.com/Charkim-Pun/IMAGES/blob/master/11.png?raw=true)<br/>![](https://github.com/Charkim-Pun/IMAGES/blob/master/11-1.png?raw=true)<br/><br/>
 
+第12步：回到固件，填入刚刚记录下来的舵机角度和偏移量，并去掉软限位的注释符。重新上传固件，上传完了输入M502(重置EEPROM)<br/>
+STEP12:Open the firmware and fill in the Degree and Offset,enable "#define MIN_SOFTWARE_ENDSTOPS".Then upload the firmware and Send M502 to reset the EEPROM.<br/>
+![](https://github.com/Charkim-Pun/IMAGES/blob/master/12.png?raw=true)<br/><br/>
