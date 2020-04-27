@@ -62,3 +62,33 @@ STEP11:Move the Nozzle over the point by the Software or the LCD. The nozzle can
 第12步：回到固件，填入刚刚记录下来的舵机角度和偏移量，并去掉软限位的注释符。重新上传固件，上传完了输入M502(重置EEPROM)<br/>
 STEP12:Open the firmware and fill in the Degree and Offset,enable "#define MIN_SOFTWARE_ENDSTOPS".Then upload the firmware and Send M502 to reset the EEPROM.<br/>
 ![](https://github.com/Charkim-Pun/IMAGES/blob/master/12.png?raw=true)<br/><br/>
+
+第13步：在显示屏选择调平热床，调平结束后，然后选择保存设置，然后按一下RAMPS上的RESET按钮重启系统。<br/>
+STEP13:Select Leveling Bed on the LCD, after that Select Save.The Press REBOOT botton on the motherboar.<br/>
+![](https://github.com/Charkim-Pun/IMAGES/blob/master/13.png?raw=true)<br/><br/>
+
+第十四步：在切片软件打印机的设置起始G-code添加命令<br/>
+M420 L <br/>
+M420 S <br/>
+M420 V <br/>
+STEP14:Edit the starting G-code,add:<br/>
+M420 L <br/>
+M420 S <br/>
+M420 V <br/><br/><br/>
+
+Finished!<br/><br/><br/><br/><br/>
+
+
+
+你可以在这里设置喷头的高度差，然后保存重启。-往下 +往上<br/>
+You can set the Z offset here then save and reboot  *- down + up <br/>
+![](https://github.com/Charkim-Pun/IMAGES/blob/master/145.png?raw=true)<br/><br/><br/>
+
+你可以在固件这里设置探测热床的点数(点数越多调平越精准)<br/>
+You can set the point of Probe point here(More points better)<br/>
+
+#if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)<br/>
+
+  // Set the number of grid points per dimension.<br/>
+  #define GRID_MAX_POINTS_X 10 //数量<br/>
+  #define GRID_MAX_POINTS_Y 10<br/>
