@@ -16,8 +16,7 @@ STEP2:<br/>
    Short circuit 2Pins(Orange)<br/>
    ![](https://github.com/Charkim-Pun/IMAGES/blob/master/2.png?raw=true)<br/><br/>
 第3步：<br/>
-注释掉#define MIN_SOFTWARE_ENDSTOPS并上传固件<br/>
-
+注释掉#define MIN_SOFTWARE_ENDSTOPS并上传固件
 STEP3:<br/>
 disable "#define MIN_SOFTWARE_ENDSTOPS" and upload the firmware to the board.<br/><br/>
   //#define MIN_SOFTWARE_ENDSTOPS<br/>
@@ -34,5 +33,18 @@ STEP4:Open the ARDUINO IDE,SET UP AS THE IMAGE.<br/>
 
 第5步：用    M280 P0 S角度   来获取最佳的放下和收起角度并记录起来，注意舵机臂撞车（有一定概率导致电流过大烧坏AMS1117芯片，最好10度10度调来确定方向）。
 以下是我的角度，每个人的可能不一样，自己试出来。放下的时候舵机臂尽量与热床垂直，收起的话就不要低于喷头就行了。<br/>
-Send M280 P0 S"degree" to get the best degree of laying down and packing up.Just like the image<br/>
-![](https://github.com/Charkim-Pun/IMAGES/blob/master/51.png?raw=true)![](https://github.com/Charkim-Pun/IMAGES/blob/master/52.png?raw=true)
+STEP5:Send M280 P0 S"degree" to get the best degree of laying down(vertical) and packing up.Just like the image<br/>
+![](https://github.com/Charkim-Pun/IMAGES/blob/master/51.png?raw=true)<br/>![](https://github.com/Charkim-Pun/IMAGES/blob/master/52.png?raw=true)<br/><br/>
+
+
+第6步：在热床尽量靠中心的地方贴一张纸画一个小点。<br/>
+STEP6:Stick a piece of paper in the middle of the bed and draw a little point.<br/>
+![](https://github.com/Charkim-Pun/IMAGES/blob/master/6.png?raw=true)<br/><br/>
+
+第7步：输入M280 P0 S（放下舵机臂的角度）<br/>
+STEP7:Send M280 P0 S"LAYING DOWN"<br/>
+![](https://github.com/Charkim-Pun/IMAGES/blob/master/51.png?raw=true)<br/><br/>
+
+第8步：把Z降到小点的正上方后，在显示屏选择运动——关闭步进电机，手动把XY移动到如图所示位置。<br/>
+STEP8:Lower the Z over the point, shutdown the Steper and move manually XY to the point.<br/>
+![](https://github.com/Charkim-Pun/IMAGES/blob/master/8.png?raw=true)<br/><br/>
