@@ -31,3 +31,8 @@ disable "#define MIN_SOFTWARE_ENDSTOPS" and upload the firmware to the board.<br
 第4步：打开ARDUINO IDE，如图设置<br/>
 STEP4:Open the ARDUINO IDE,SET UP AS THE IMAGE.<br/>
 ![](https://github.com/Charkim-Pun/IMAGES/blob/master/4.png?raw=true)<br/><br/>
+
+第5步：用    M280 P0 S角度   来获取最佳的放下和收起角度并记录起来，注意舵机臂撞车（有一定概率导致电流过大烧坏AMS1117芯片，最好10度10度调来确定方向）。
+以下是我的角度，每个人的可能不一样，自己试出来。放下的时候舵机臂尽量与热床垂直，收起的话就不要低于喷头就行了。<br/>
+Send M280 P0 S"degree" to get the best degree of laying down and packing up.Just like the image<br/>
+![](https://github.com/Charkim-Pun/IMAGES/blob/master/51.png?raw=true)![](https://github.com/Charkim-Pun/IMAGES/blob/master/52.png?raw=true)
