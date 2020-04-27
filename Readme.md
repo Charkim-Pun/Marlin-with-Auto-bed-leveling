@@ -71,7 +71,7 @@ STEP13:Select Leveling Bed on the LCD, after that Select Save.The Press REBOOT b
 M420 L <br/>
 M420 S <br/>
 M420 V <br/>
-STEP14:Edit the starting G-code,add:<br/>
+STEP14:Edit the starting G-code in the cutting software,add:<br/>
 M420 L <br/>
 M420 S <br/>
 M420 V <br/><br/><br/>
