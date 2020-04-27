@@ -3,7 +3,7 @@ You just need a Servo motor AND a Switch for doing this!
 
 
 
--------------------------------------------------------------Tutorial---------------------------------------------------------------------
+-------------------------------------------------------------Tutorial-------------------------------------------------------------------<br/>
 第1步:<br/>准备一个舵机和打印件，舵机的延伸臂一定要比喷头还早碰到热床并安装好（任何一个部件都一定要很牢固不能松动）不一定要和图片中的一模一样。<br/>
 STEP1:<br/>Prepare a servo and printing models, the arm of the servo must reach to the bed before the nozzle.Every parts should be very sturdy.<br/>
 ![](https://github.com/Charkim-Pun/IMAGES/blob/master/1.png?raw=true)<br/><br/>
@@ -28,6 +28,6 @@ disable "#define MIN_SOFTWARE_ENDSTOPS" and upload the firmware to the board.<br
     #define MIN_SOFTWARE_ENDSTOP_Z<br/>
   #endif<br/><br/>
   
-第四步：打开ARDUINO IDE，如图设置<br/>
+第4步：打开ARDUINO IDE，如图设置<br/>
 STEP4:Open the ARDUINO IDE,SET UP AS THE IMAGE.<br/>
 ![](https://github.com/Charkim-Pun/IMAGES/blob/master/4.png?raw=true)<br/><br/>
